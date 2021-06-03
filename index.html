@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom FAST Web Components example</title>
+    <style>
+      fast-design-system-provider {
+        display: inline-block;
+      }
+
+      my-fast-component:not(:defined) {
+        visibility: hidden;
+      }
+
+      my-fast-component {
+        padding: 14px;
+        display: flex;
+        --name-font-style: italic;
+      }
+
+      my-fast-component span {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+    <fast-design-system-provider use-defaults>
+        <my-fast-component name="Cyrille">
+          <p>I love <span>FAST</span> web components <3</p>
+        </my-fast-component>
+    </fast-design-system-provider>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
